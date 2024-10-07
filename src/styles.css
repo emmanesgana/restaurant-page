@@ -1,0 +1,203 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0 auto;
+    min-height: 100vh;
+    color: #2e2e2e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1em;
+    align-items: center;
+    padding-inline: 2em;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.title {
+    display: flex;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-left: 1em;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+button:hover {
+    color: #e20000;
+}
+
+#content {
+    position: relative;
+}
+
+.hero-img {
+    filter: brightness(40%);
+    object-fit: cover;
+    height: 480px;
+    width: 100%;
+}
+
+.welcome {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-title {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.description {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.menu-list {
+    width: 60%;
+    padding-block: 2em;
+    margin: 0 auto;
+}
+
+.menu-list h1 {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.dots {
+    flex: 1;
+    border-bottom: 2px dotted #999;
+    margin: 0.6em 5px 0;
+}
+
+.about {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.about h1 {
+    margin-bottom: 1em;
+}
+
+.about p{
+    margin-bottom: 2em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2em;
+    font-weight: 600;
+}
+
+@media(min-width: 480px) {
+    .welcome-title {
+        font-size: 3rem;
+    }
+
+    .menu-list {
+        width: 50%;
+    }
+
+    .about {
+        width: 50%;
+    }
+}
+
+.active {
+    color: #e20000;
+}
